@@ -1,0 +1,46 @@
+// Motor A connections
+int en = 9;
+int in1 = 8;
+int in2 = 7;
+
+
+void setup() {
+	// the motor control pins setup
+	   pinMode(en, OUTPUT);
+	   pinMode(in1, OUTPUT);
+	   pinMode(in2, OUTPUT);
+	
+	
+	// Initial state
+	   digitalWrite(in1, LOW);
+	   digitalWrite(in2, LOW);
+
+}
+
+void loop() {
+	directionControl();
+	delay(1000);	
+}
+
+//This function lets you control spinning direction of the motor
+void directionControl() {
+	// Set motor to maximum speed
+	// For PWM maximum possible values are 0 to 255
+       analogWrite(en, 255);
+
+	// Turn on motor 
+	   digitalWrite(in1, HIGH);
+	   digitalWrite(in2, LOW);
+	   delay(2000);
+	
+	// Now change motor directions
+	   digitalWrite(in1, LOW);
+	   digitalWrite(in2, HIGH);
+	   delay(2000);
+	
+	// Turn off motor
+	   digitalWrite(in1, LOW);
+	   digitalWrite(in2, LOW);
+
+}
+
