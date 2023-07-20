@@ -12,8 +12,8 @@ making a simulation in tinkercad for arduino servo motor and dc motor.
 
 
 
-2-the dc motor:
+2-the dc motor using l293d :
 
 
 
-![picture](servo.png)
+![picture](dcmotor.png)
