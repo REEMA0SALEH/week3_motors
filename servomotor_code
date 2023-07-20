@@ -1,0 +1,17 @@
+#include <Servo.h>
+
+Servo servoBase;//Asigno un nombre específico
+
+void setup() {
+   servoBase.attach(A1);// servo Pin A1
+   servoBase.write(0);  //assign 0 to the servo motor
+}
+
+void loop() {
+
+  for(int i=0; i<=180; i=i+10)
+  {
+   servoBase.write(i);
+   delay(1000);
+  }
+ }
